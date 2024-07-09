@@ -6,6 +6,13 @@ categories: [Setup, Tutorial]
 tags: [installation, getting started]
 ---
 
+### Prerequisites
+* Tested on macOS, Ubuntu, and Debian
+* docker and docker-compose
+* python3 with pip3
+
+### Installation
+
 1. Clone the repository and change to the FirmwareDroid directory
     ```bash
     git clone --recurse-submodules https://github.com/FirmwareDroid/FirmwareDroid.git
