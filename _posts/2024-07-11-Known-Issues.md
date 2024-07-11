@@ -5,8 +5,6 @@ date: 2024-07-11 13:37:00 +0800
 description: Short summary of the post.
 categories: [Issues, Troubleshooting]
 tags: [Issues, Troubleshooting, Problems, Bugs]
-toc: true
-comments: false
 ---
 
 ### Work-horse terminated unexpectedly
