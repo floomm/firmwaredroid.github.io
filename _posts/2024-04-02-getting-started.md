@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-author: Tom
+author: tom
 date: 2024-04-02 13:37:00 +0800
 categories: [Setup, Tutorial]
 tags: [installation, getting started]

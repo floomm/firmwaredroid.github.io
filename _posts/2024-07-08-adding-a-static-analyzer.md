@@ -1,6 +1,6 @@
 ---
 title: Adding your own static analyzer
-author: Tom
+author: tom
 date: 2024-07-08 13:37:00 +0800
 categories: [Tutorial, Static-Analysis]
 tags: [getting started, static-analysis]

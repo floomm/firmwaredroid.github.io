@@ -1,6 +1,6 @@
 ---
 title: Known Issues
-author: Tom
+author: tom
 date: 2024-07-11 13:37:00 +0800
 description: Short summary of the post.
 categories: [Issues, Troubleshooting]

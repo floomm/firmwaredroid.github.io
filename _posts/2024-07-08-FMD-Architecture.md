@@ -1,6 +1,6 @@
 ---
 title: FMD Architecture
-author: Tom
+author: tom
 date: 2024-07-08 13:37:00 +0800
 categories: [Documentation, Architecture]
 tags: [Architecture, API, Overview]
