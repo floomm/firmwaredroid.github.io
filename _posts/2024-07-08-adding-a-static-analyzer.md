@@ -4,6 +4,7 @@ author: Tom
 date: 2024-07-08 13:37:00 +0800
 categories: [Tutorial, Static-Analysis]
 tags: [getting started, static-analysis]
+toc: true
 ---
 
 In this tutorial, we will show you how to add a new static analyzer (python based) to FMD and scan a couple of apk 
