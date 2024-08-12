@@ -2,7 +2,7 @@
 title: Known Issues
 author: tom
 date: 2024-07-11 13:37:00 +0800
-description: Short summary of the post.
+description: A summary of known issues and their solutions.
 categories: [Issues, Troubleshooting]
 tags: [Issues, Troubleshooting, Problems, Bugs]
 ---
