@@ -35,7 +35,7 @@ several python packages with conflicting dependencies. For other programming lan
 a similar approach to keep dependencies where possible separated.
 
 To install new dependencies in the `apk_scanner-worker` container, you need to modify the `Dockerfile` located in
-`docker/base/`(see [Dockerfile_apk_scanner](https://github.com/FirmwareDroid/FirmwareDroid/blob/main/docker/base/Dockerfile_apk_scanner). 
+`docker/base/`(see [Dockerfile_apk_scanner](https://github.com/FirmwareDroid/FirmwareDroid/blob/main/docker/base/Dockerfile_apk_scanner)). 
 The `Dockerfile_apk_scanner` is responsible for building the docker image of the 
 `apk_scanner-worker` container. The `apk_scanner-worker` container is based on the `firmwaredroid-base` image 
 (see [Dockerfile_BASE](https://github.com/FirmwareDroid/FirmwareDroid/blob/main/Dockerfile_BASE)) and
