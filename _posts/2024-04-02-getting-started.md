@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 author: tom
-date: 2024-04-02 13:37:00 +0800
+date: 2025-08-27 13:37:00 +0800
 categories: [Setup, Tutorial]
 tags: [installation, getting started]
 ---
@@ -26,12 +26,24 @@ tags: [installation, getting started]
     pip3 install jinja2
     ```
 
-3. Run the setup script:
+3. Run the setup script, which will create a `.env` file with default settings. You can edit this file later to change settings like passwords or ports.:
 
     ```bash
     python3 ./setup.py
     ```
+   
+#### Option 1: Just Run (for users)
+4. Start the containers
 
+    ```bash
+    chown -R $(id -u):$(id -g) ./blob_storage
+    docker compose -f docker-compose-release.yml up
+    ```
+    The first start takes some time because the database will change the mode to a replica-set.
+    Wait until the logscreen stops moving (takes usually 2 to 5 minutes).
+
+
+#### Option 2: Build Source (for developers)
 4. Build the docker base images (takes some time).
 
     ```bash
@@ -43,11 +55,12 @@ tags: [installation, getting started]
 
     ```bash
     chown -R $(id -u):$(id -g) ./blob_storage
-    docker-compose up
+    docker compose up
     ```
     The first start takes some time because the database will change the mode to a replica-set.
     Wait until the logscreen stops moving (takes usually 2 to 5 minutes).
 
+### Usage
 6. Open the browser under [https://fmd.localhost](https://fmd.localhost). By default, a self-signed certificates is used, and you will encounter a TLS warning.
 
 7. Log-into the application. Password and username can be found in the `.env` file within the root directory of the server.
@@ -60,7 +73,8 @@ tags: [installation, getting started]
     ...
     ```
 
-8. After log-in, you can explore the following routes:
-    - [GraphQL API (/graphql/)](https://fmd.localhost/graphql/)
-    - [User-Management (/admin/)](https://fmd.localhost/admin/)
-    - [RQ-Job Management (/django-rq/)](https://fmd.localhost/django-rq/)
+8. After log-in (via https://fmd.localhost/admin), you can explore the following routes:
+   - [Frontend (https://fmd.localhost/)](https://fmd.localhost/)
+   - [GraphQL API (https://fmd.localhost/graphql/)](https://fmd.localhost/graphql/)
+   - [User-Management (https://fmd.localhost/admin/)](https://fmd.localhost/admin/)
+   - [RQ-Job Management (https://fmd.localhost/django-rq/)](https://fmd.localhost/django-rq/)
