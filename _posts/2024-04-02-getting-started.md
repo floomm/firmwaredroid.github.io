@@ -68,9 +68,11 @@ tags: [installation, getting started]
     The first start takes some time because the database will change the mode to a replica-set.
     Wait until the logscreen stops moving (takes usually 2 to 5 minutes).
 
-3. Open the browser under [https://fmd.localhost](https://fmd.localhost). By default, a self-signed certificates is used, and you will encounter a TLS warning.
+### Usage
 
-4. Log-into the application. Password and username can be found in the `.env` file within the root directory of the server.
+1. Open the browser under [https://fmd.localhost](https://fmd.localhost). By default, a self-signed certificates is used, and you will encounter a TLS warning.
+
+2. Log-into the application. Password and username can be found in the `.env` file within the root directory of the server.
 
     ```bash
     cat .env
@@ -80,7 +82,7 @@ tags: [installation, getting started]
     ...
     ```
 
-5. After log-in (via https://fmd.localhost/admin), you can explore the following routes:
+3. After log-in (via https://fmd.localhost/admin), you can explore the following routes:
    - [Frontend (https://fmd.localhost/)](https://fmd.localhost/)
    - [GraphQL API (https://fmd.localhost/graphql/)](https://fmd.localhost/graphql/)
    - [User-Management (https://fmd.localhost/admin/)](https://fmd.localhost/admin/)
