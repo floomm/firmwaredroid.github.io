@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 author: tom
-date: 2024-04-02 13:37:00 +0800
+date: 2025-08-27 13:37:00 +0800
 categories: [Setup, Tutorial]
 tags: [installation, getting started]
 ---
@@ -34,20 +34,32 @@ tags: [installation, getting started]
     pip3 install jinja2 cryptography
     ```
 
-4. Run the setup script:
+4. Run the setup script, which will create a `.env` file with default settings. You can edit this file later to change settings like passwords or ports.
 
     ```bash
     python3 ./setup.py
     ```
+   
+#### Option 1: Just Run (for users)
+1. Start the containers
 
-5. Build the docker base images (takes some time).
+    ```bash
+    chown -R $(id -u):$(id -g) ./blob_storage
+    docker compose -f docker-compose-release.yml up
+    ```
+    The first start takes some time because the database will change the mode to a replica-set.
+    Wait until the logscreen stops moving (takes usually 2 to 5 minutes).
+
+
+#### Option 2: Build Source (for developers)
+1. Build the docker base images (takes some time).
 
     ```bash
     chmod +x ./docker/build_docker_images.sh
     ./docker/build_docker_images.sh
     ```
 
-6. Set correct access rights for the blob storage and start the containers
+2. Set correct access rights for the blob storage and start the containers
 
     ```bash
     chown -R $(id -u):$(id -g) ./blob_storage
@@ -56,9 +68,9 @@ tags: [installation, getting started]
     The first start takes some time because the database will change the mode to a replica-set.
     Wait until the logscreen stops moving (takes usually 2 to 5 minutes).
 
-7. Open the browser under [https://fmd.localhost](https://fmd.localhost). By default, a self-signed certificates is used, and you will encounter a TLS warning.
+3. Open the browser under [https://fmd.localhost](https://fmd.localhost). By default, a self-signed certificates is used, and you will encounter a TLS warning.
 
-8. Log-into the application. Password and username can be found in the `.env` file within the root directory of the server.
+4. Log-into the application. Password and username can be found in the `.env` file within the root directory of the server.
 
     ```bash
     cat .env
@@ -68,7 +80,8 @@ tags: [installation, getting started]
     ...
     ```
 
-9. After log-in, you can explore the following routes:
-    - [GraphQL API (/graphql/)](https://fmd.localhost/graphql/)
-    - [User-Management (/admin/)](https://fmd.localhost/admin/)
-    - [RQ-Job Management (/django-rq/)](https://fmd.localhost/django-rq/)
+5. After log-in (via https://fmd.localhost/admin), you can explore the following routes:
+   - [Frontend (https://fmd.localhost/)](https://fmd.localhost/)
+   - [GraphQL API (https://fmd.localhost/graphql/)](https://fmd.localhost/graphql/)
+   - [User-Management (https://fmd.localhost/admin/)](https://fmd.localhost/admin/)
+   - [RQ-Job Management (https://fmd.localhost/django-rq/)](https://fmd.localhost/django-rq/)
