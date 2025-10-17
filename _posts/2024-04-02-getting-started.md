@@ -31,8 +31,7 @@ tags: [installation, getting started]
 3. Install python packages for the setup:
 
     ```bash
-    pip3 install jinja2
-    pip3 install cryptography
+    pip3 install jinja2 cryptography
     ```
 
 4. Run the setup script:
